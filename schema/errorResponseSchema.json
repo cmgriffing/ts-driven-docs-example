@@ -1,0 +1,17 @@
+{
+  "$ref": "#/components/schemas/errorResponseSchema",
+  "components/schemas": {
+    "errorResponseSchema": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "enum": [
+            ""
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

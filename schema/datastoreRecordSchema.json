@@ -1,0 +1,21 @@
+{
+  "$ref": "#/components/schemas/datastoreRecordSchema",
+  "components/schemas": {
+    "datastoreRecordSchema": {
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "type": "number"
+        },
+        "modifiedAt": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "createdAt",
+        "modifiedAt"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

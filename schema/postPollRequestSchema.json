@@ -1,0 +1,21 @@
+{
+  "$ref": "#/components/schemas/postPollRequestSchema",
+  "components/schemas": {
+    "postPollRequestSchema": {
+      "type": "object",
+      "properties": {
+        "teamId": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "teamId",
+        "name"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

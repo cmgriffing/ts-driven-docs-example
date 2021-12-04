@@ -1,0 +1,71 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: A Generic API
+  description: ""
+paths:
+  /teams:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/postTeamRequestSchema"
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/postTeamResponseSchema"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/errorResponseSchema"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/errorResponseSchema"
+components:
+  schemas:
+    postTeamRequestSchema:
+      type: object
+      properties:
+        name:
+          type: string
+      required:
+        - name
+      additionalProperties: false
+    postTeamResponseSchema:
+      type: object
+      properties:
+        createdAt:
+          type: number
+        modifiedAt:
+          type: number
+        teamId:
+          type: string
+        userId:
+          type: string
+        name:
+          type: string
+      required:
+        - createdAt
+        - modifiedAt
+        - teamId
+        - userId
+        - name
+      additionalProperties: false
+    errorResponseSchema:
+      type: object
+      properties:
+        message:
+          type: string
+          enum:
+            - ""
+      additionalProperties: false

@@ -1,0 +1,17 @@
+{
+  "$ref": "#/components/schemas/postTeamRequestSchema",
+  "components/schemas": {
+    "postTeamRequestSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
